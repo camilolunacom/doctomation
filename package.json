@@ -1,0 +1,20 @@
+{
+  "name": "doctomation",
+  "version": "1.0.0",
+  "description": "Simple page for Doctomation",
+  "main": "sass/mystyles.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch",
+    "publish": "npm run css-build && cp node_modules/@fortawesome/fontawesome-pro/js/all.js js/"
+  },
+  "author": "Camilo Luna",
+  "license": "ISC",
+  "devDependencies": {
+    "@fortawesome/fontawesome-pro": "^5.10.1",
+    "bulma": "^0.7.5",
+    "node-sass": "^4.12.0"
+  }
+}
