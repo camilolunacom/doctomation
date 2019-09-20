@@ -2,100 +2,89 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Doctomation</title>
-  <link rel="stylesheet" href="css/mystyles.css">
-  <script type="application/javascript" src="js/all.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doctomation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/mystyles.css">
+    <script type="application/javascript" src="js/all.js"></script>
 </head>
 
 <body>
-  <section class="section">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-half">
-          <div class="box has-text-centered has-background-white">
-            <h1 class="title">Doctomation</h1>
-            <form action="#" onsubmit="uploadFile();return false">
-              <div class="field">
-                <div class="control">
-                  <div class="file is-primary is-centered has-name is-boxed">
-                    <label class="file-label" for="pdf">
-                      <input class="file-input" type="file" id="pdf" name="pdf" accept=".pdf">
-                      <span class="file-cta">
-                        <span class="file-icon">
-                          <i class="fas fa-upload"></i>
+    <div class="main-content">
+        <section class="file-form">
+            <div class="file-form__container">
+                <h1 class="file-form__title">
+                    <img src="img/doctomation-logo.svg" alt="DOCtomation: Simplify & Automate">
+                </h1>
+                <form class="file-form__form" action="#" name="pdf" onsubmit="uploadFile();return false" required">
+                    <label class="file-form__label" for="pdf">
+                        <div class="file-form__pointer"></div>
+                        <input class="file-form__input" type="file" id="pdf" name="pdf" accept=".pdf" required>
+                        <span class="file-form__icon">
+                            <span class="fa-stack">
+                                <i class="fal fa-circle fa-stack-2x"></i>
+                                <i class="fal fa-file-alt fa-stack-1x"></i>
+                            </span>
                         </span>
-                        <span class="file-lable">
+                        <span id="filename" class="file-form__name">
+                            Choose a file...
                         </span>
-                      </span>
-                      <span id="filename" class="file-name">
-                        Choose a file...
-                      </span>
                     </label>
-                  </div>
+                    <div class="file-form__select">
+                        <select id="template" name="template" required>
+                            <option value="">Invoice type</option>
+                            <option value="en">Meo empresas</option>
+                            <option value="pt">Epal</option>
+                            <option value="es">Galp</option>
+                        </select>
+                    </div>
+                    <div class="submit">
+                        <input id="upload" class="button is-primary" type="submit" value="Upload File">
+                    </div>
+                </form>
+                <div class="file-form__success hidden">
+                    <span class="big">Congrats!</span>
+                    <span class="small">Your document was read.<br>Simple and automatic!</span>
+                    <div class="file-form__try-again">
+                        <button class="button" onclick="tryAgain()">Try again</button>
+                    </div>
                 </div>
-              </div>
-              <div class="field has-text-centered">
-                <div class="control has-text-centered">
-                  <div class="select is-primary">
-                    <select id="language">
-                      <option value="">Language...</option>
-                      <option value="en">English</option>
-                      <option value="pt">Portuguese</option>
-                      <option value="es">Spanish</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <input id="upload" class="button is-primary" type="submit" value="Upload File">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            </div>
+        </section>
 
-  <section class="section has-background-white">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-narrow">
-          <table class="table">
-            <tbody>
-              <tr>
-                <th>Invoice Date</th>
-                <td id="date" class="has-text-right"></td>
-              </tr>
-              <tr>
-                <th>Invoice Number</th>
-                <td id="number" class="has-text-right"></td>
-              </tr>
-              <tr>
-                <th>Value</th>
-                <td id="value" class="has-text-right"></td>
-              </tr>
-              <tr>
-                <th>Account</th>
-                <td id="account" class="has-text-right"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+        <section class="file-form__results hidden">
+            <table class="file-form__table">
+                <tbody>
+                    <tr>
+                        <th>Invoice Date</th>
+                        <td id="date" class="has-text-right"></td>
+                    </tr>
+                    <tr>
+                        <th>Invoice Number</th>
+                        <td id="number" class="has-text-right"></td>
+                    </tr>
+                    <tr>
+                        <th>Value</th>
+                        <td id="value" class="has-text-right"></td>
+                    </tr>
+                    <tr>
+                        <th>Account</th>
+                        <td id="account" class="has-text-right"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </div>
-  </section>
 
-  <footer class="footer has-background-primary has-text-light">
-    <div class="content has-text-centered">
-      <p>
-        &copy 2019 <strong><a class="has-text-light" href="#">Doctomation</a></strong> by <strong><a
-            class="has-text-light" href="https://webrand.agency/" target="_blank">WEbrand Agency</a></strong>. All
-        rights reserved.
-      </p>
-    </div>
-  </footer>
+    <footer>
+        <p><span>&copy 2019 <a class="has-text-light" href="#">Doctomation</a> by <a class="has-text-light"
+                    href="https://webrand.agency/" target="_blank">WEbrand Agency</a>.</span> <span>All rights
+                reserved.</span></p>
+    </footer>
 
-  <script type="application/javascript" src="js/script.js"></script>
+    <script type="application/javascript" src="js/script.js"></script>
 
 </body>
 

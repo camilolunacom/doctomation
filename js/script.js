@@ -17,4 +17,14 @@ function uploadFile() {
     document.getElementById('number').innerHTML = number;
     document.getElementById('value').innerHTML = value;
     document.getElementById('account').innerHTML = account;
+    document.querySelector('.file-form__results').classList.remove('hidden');
+    document.querySelector('.file-form__results').classList.remove('invisible');
+    document.querySelector('.file-form__form').classList.add('hidden');
+    document.querySelector('.file-form__success').classList.remove('hidden');
+}
+
+function tryAgain() {
+    document.querySelector('.file-form__success').classList.add('hidden');
+    document.querySelector('.file-form__results').classList.add('invisible');
+    document.querySelector('.file-form__form').classList.remove('hidden');
 }

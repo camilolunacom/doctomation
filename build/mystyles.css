@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400&display=swap");
+body {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px; }
+
+.file-form {
+  padding: 0 3em;
+  width: 100%; }
+
+.file-form__container {
+  margin: auto;
+  width: 80vh;
+  height: 80vh;
+  max-height: 400px;
+  max-width: 400px; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2Nzcy9teXN0eWxlcy5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEscUZBQXFGO0FBQ3JGO0VBQ0Usb0NBQW9DO0VBQ3BDLGVBQWUsRUFBRTs7QUFFbkI7RUFDRSxjQUFjO0VBQ2QsV0FBVyxFQUFFOztBQUVmO0VBQ0UsWUFBWTtFQUNaLFdBQVc7RUFDWCxZQUFZO0VBQ1osaUJBQWlCO0VBQ2pCLGdCQUFnQixFQUFFIiwiZmlsZSI6Im15c3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgdXJsKFwiaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PUZpcmErU2FuczozMDAsNDAwJmRpc3BsYXk9c3dhcFwiKTtcbmJvZHkge1xuICBmb250LWZhbWlseTogXCJGaXJhIFNhbnNcIiwgc2Fucy1zZXJpZjtcbiAgZm9udC1zaXplOiAxNnB4OyB9XG5cbi5maWxlLWZvcm0ge1xuICBwYWRkaW5nOiAwIDNlbTtcbiAgd2lkdGg6IDEwMCU7IH1cblxuLmZpbGUtZm9ybV9fY29udGFpbmVyIHtcbiAgbWFyZ2luOiBhdXRvO1xuICB3aWR0aDogODB2aDtcbiAgaGVpZ2h0OiA4MHZoO1xuICBtYXgtaGVpZ2h0OiA0MDBweDtcbiAgbWF4LXdpZHRoOiA0MDBweDsgfVxuIl19 */
