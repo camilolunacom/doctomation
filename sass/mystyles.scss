@@ -39,6 +39,8 @@ body {
 .file-form {
     padding: 3em 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .file-form__container {
@@ -301,12 +303,12 @@ footer {
 
 @media(max-width: 467px) {
     body {
-        background-image: none;
+        background-size: 200% auto;
     }
-    .file-form__container {
-        background: #fff;
-        border-radius: 50%;
-    }
+    // .file-form__container {
+    //     background: #fff;
+    //     border-radius: 50%;
+    // }
 }
 
 @media (max-width: 400px) {
@@ -317,6 +319,12 @@ footer {
         .file-form__select {
             margin-bottom: 2vh;
         }
+    }
+}
+
+@media(max-width: 355px) {
+    body {
+        background-size: 640px 484px;
     }
 }
 

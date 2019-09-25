@@ -29,7 +29,9 @@ body {
 
 .file-form {
   padding: 3em 0;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  justify-content: center; }
 
 .file-form__container {
   margin: auto;
@@ -232,16 +234,17 @@ footer {
 
 @media (max-width: 467px) {
   body {
-    background-image: none; }
-  .file-form__container {
-    background: #fff;
-    border-radius: 50%; } }
+    background-size: 200% auto; } }
 
 @media (max-width: 400px) {
   .file-form__container .file-form__title,
   .file-form__container .file-form__label,
   .file-form__container .file-form__select {
     margin-bottom: 2vh; } }
+
+@media (max-width: 355px) {
+  body {
+    background-size: 640px 484px; } }
 
 .hidden {
   display: none !important;
