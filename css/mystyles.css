@@ -18,7 +18,11 @@ body {
   font-family: "Fira Sans", sans-serif;
   font-weight: 300;
   font-size: 16px;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: 840px 635px;
+  background-position: center calc(3em - 13px); }
 
 .main-content {
   min-height: calc(100vh - 5.15em); }
@@ -33,8 +37,8 @@ body {
   height: 90vw;
   max-height: 420px;
   max-width: 420px;
-  background: #fff;
-  border-radius: 50%;
+  min-height: 320px;
+  min-width: 320px;
   padding: 2em;
   box-sizing: border-box; }
 
@@ -225,6 +229,13 @@ footer {
     min-height: calc(100vh - 6.1em); }
   footer span {
     display: block; } }
+
+@media (max-width: 467px) {
+  body {
+    background-image: none; }
+  .file-form__container {
+    background: #fff;
+    border-radius: 50%; } }
 
 @media (max-width: 400px) {
   .file-form__container .file-form__title,
